@@ -39,7 +39,7 @@ Tools needed to run this app:
 ```
 mbio
 ⋅⋅nodemodules/
-⋅⋅output/ 
+⋅⋅output/ (screenshot of car configurator screen and text file requested on the challenge)
 .mainPage.js
 .pageCarConfigurator.js
 .pageOurModels.js
