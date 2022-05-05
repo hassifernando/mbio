@@ -2,7 +2,7 @@
 
 Code challenge to test this scenario
 
- * You are requested to automate the following test case “Validate A Class models price are between
+You are requested to automate the following test case “Validate A Class models price are between
 £15,000 and £60,000" as described below:
 
  - Open Mercedes-benz United Kingdom market
@@ -40,8 +40,10 @@ Tools needed to run this app:
 mbio
 ⋅⋅nodemodules/
 ⋅⋅output/ 
-.page.js
-.youtube_test.js
+.mainPage.js
+.pageCarConfigurator.js
+.pageOurModels.js
+.challenge_test.js
 
 package.json (scripts and dependencies)
 steps_file.js (common and most used functions)
