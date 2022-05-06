@@ -60,7 +60,7 @@ module.exports = function () {
                     return true;
                 }
             });
-            let selectedCars = `Cheapest: ${cars[0].price} \nMost expensive: ${cars[cars.length - 1].price}`
+            let selectedCars = `Lowest price: ${cars[0].price} \nHighest price : ${cars[cars.length - 1].price}`
             return selectedCars
         },
         /**function to filter a fuel type inside the page to confiration of the car */

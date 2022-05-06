@@ -39,6 +39,8 @@ Tools needed to run this app:
 ```
 mbio
 ⋅⋅codecept-conf/
+   .chromium.conf.js
+   .firefox.conf.js
 ⋅⋅nodemodules/
 ⋅⋅output/ (screenshot of car configurator screen and text file requested on the challenge)
 ⋅⋅pages/
