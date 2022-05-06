@@ -1,6 +1,6 @@
 'use strict';
 
-let I = require('./steps_file')();
+let I = require('../steps_file')();
 
 
 
@@ -67,10 +67,10 @@ module.exports = function () {
         selectFuelType(car) {
             /**I will scroll to the positon on the page that I will manipulate elements */
             I.wait(0.5)
-            I.scrollTo(FUELFILTER)
+            I.retry({ retries: 20, minTimeout: 1 }).scrollTo(FUELFILTER)
             I.wait(0.5)
             //open the fuel filter with a click
-            I.click(FUELFILTER)
+            I.retry({ retries: 20, minTimeout: 1 }).click(FUELFILTER)
             I.wait(0.5)
             //Chose the option with the parameter defined with the object at the botton of a test file
             switch (car.fuelType) {

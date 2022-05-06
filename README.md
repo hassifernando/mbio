@@ -38,12 +38,15 @@ Tools needed to run this app:
 
 ```
 mbio
+⋅⋅codecept-conf/
 ⋅⋅nodemodules/
 ⋅⋅output/ (screenshot of car configurator screen and text file requested on the challenge)
-.mainPage.js
-.pageCarConfigurator.js
-.pageOurModels.js
-.challenge_test.js
+⋅⋅pages/
+   .mainPage.js
+   .pageCarConfigurator.js
+   .pageOurModels.js
+⋅⋅tests/
+   .challenge_test.js
 
 package.json (scripts and dependencies)
 steps_file.js (common and most used functions)
@@ -51,4 +54,6 @@ steps_file.js (common and most used functions)
 
 ## Running tests
 
-* `npm run codeceptjs`
+* `npm run chromium`
+* `npm run firefox`
+* `npm run firefox && npm run chromium`

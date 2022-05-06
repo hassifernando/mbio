@@ -8,8 +8,8 @@ setHeadlessWhen(process.env.HEADLESS);
 setCommonPlugins();
 
 exports.config = {
-  tests: './*_test.js',
-  output: './output',
+  tests: '../tests/*.js',
+  output: '../output',
   helpers: {
     Playwright: {
       url: 'http://localhost',
@@ -19,10 +19,10 @@ exports.config = {
     }
   },
   include: {
-    I: './steps_file.js',
-    mainPage: './mainPage.js',
-    pageOurModels: './pageOurModels.js',
-    pageCarConfigurator: './pageCarConfigurator.js'
+    I: '../steps_file.js',
+    mainPage: '../pages/mainPage.js',
+    pageOurModels: '../pages/pageOurModels.js',
+    pageCarConfigurator: '../pages/pageCarConfigurator.js'
   },
   bootstrap: null,
   mocha: {},

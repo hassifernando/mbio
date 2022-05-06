@@ -1,6 +1,6 @@
 'use strict';
 
-let I = require('./steps_file')();
+let I = require('../steps_file')();
 
 
 //locator
@@ -13,8 +13,8 @@ module.exports = function () {
     return actor({
         /**command to accept cookien on the main page */
         acceptCookies() {
-            I.wait(0.5)
-            I.click(ACCEPTALLBUTTON)
+            I.wait(3)
+            I.retry({ retries: 20, minTimeout: 1 }).forceClick(ACCEPTALLBUTTON)
         },
         /**action command to open a menu to choose the model */
         openOurCarsMenu() {

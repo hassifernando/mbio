@@ -11,6 +11,11 @@ module.exports = function () {
         if (err) throw err;
         console.log(`File is created successfully and content is saved into the ${path}.`);
       });
+    },
+    getRandomInt(min, max) {
+      min = Math.ceil(min);
+      max = Math.floor(max);
+      return Math.floor(Math.random() * (max - min)) + min;
     }
 
   });

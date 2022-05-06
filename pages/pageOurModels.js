@@ -1,6 +1,6 @@
 'use strict';
 
-let I = require('./steps_file')();
+let I = require('../steps_file')();
 
 
 //locator
@@ -12,8 +12,8 @@ module.exports = function () {
 
         /**assert to validate that has a car with the name specified in a object inside the test */
         assertHasCar(car) {
-            I.see(car.name, 'shadow=span')
-            I.seeElement(`shadow=div.wb-grid-row span.${car.classId}`)
+            I.retry({ retries: 20, minTimeout: 1 }).see(car.name, 'shadow=span')
+            I.retry({ retries: 20, minTimeout: 1 }).seeElement(`shadow=div.wb-grid-row span.${car.classId}`)
         },
         openOptionBuildYourCar(car) {
             I.moveCursorTo(`shadow=span.${car.classId}`)

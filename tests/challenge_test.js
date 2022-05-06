@@ -15,6 +15,9 @@ Feature('QA Engineer Technical Challenge');
 Scenario("Validate A Class models price are between £15,000 and £60,000", async ({ I, mainPage, pageOurModels, pageCarConfigurator }) => {
   let minValue = 15000
   let maxValue = 60000
+  let idTest = I.getRandomInt(1, 60000)
+
+
   I.amOnPage("https://www.mercedes-benz.co.uk/");
   await mainPage.acceptCookies()
   await mainPage.openOurCarsMenu()
@@ -23,12 +26,12 @@ Scenario("Validate A Class models price are between £15,000 and £60,000", asyn
   await pageOurModels.openOptionBuildYourCar(car)
   await pageCarConfigurator.selectFuelType(car)
   //time to screenshot, the screenshot is saved inside the output folder with the name of file mercedes-benz-cars-car-configurator.png
-  I.saveScreenshot('mercedes-benz-cars-car-configurator.png', true)
+  I.saveScreenshot(`mercedes-benz-cars-car-configurator_${idTest}.png`, true)
   //create array with cars presented on screen as save into the cars[]
   let cars = await pageCarConfigurator.createArrayCars()
   console.log(cars)
   //Define the path and the name of the file
-  let path = 'output/cars.txt'
+  let path = `output/cars_${idTest}.txt`
   //the function is inside the steps_file.js
   I.createFile(path, await pageCarConfigurator.theCheapestAndtheMostExpensive(cars))
   //Assert for the value of cars
